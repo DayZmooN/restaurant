@@ -6,15 +6,32 @@
 <title>Restaurant Belvédère — Fribourg, Suisse</title>
 <meta name="description" content="Restaurant Belvédère à Fribourg : cuisine suisse de saison. Choisissez votre langue.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="fr/">
-<link rel="alternate" hreflang="fr" href="fr/">
-<link rel="alternate" hreflang="de" href="de/">
-<link rel="alternate" hreflang="it" href="it/">
-<link rel="alternate" hreflang="en" href="en/">
-<link rel="alternate" hreflang="x-default" href="fr/">
-<meta http-equiv="refresh" content="0; url=fr/">
+<link rel="canonical" href="https://www.restaurant-belvedere.ch/fr/">
+<link rel="alternate" hreflang="fr" href="https://www.restaurant-belvedere.ch/fr/">
+<link rel="alternate" hreflang="de" href="https://www.restaurant-belvedere.ch/de/">
+<link rel="alternate" hreflang="it" href="https://www.restaurant-belvedere.ch/it/">
+<link rel="alternate" hreflang="en" href="https://www.restaurant-belvedere.ch/en/">
+<link rel="alternate" hreflang="x-default" href="https://www.restaurant-belvedere.ch/fr/">
+<!-- Immediate fallback redirect for crawlers/browsers that don't run the JS below -->
+<meta http-equiv="refresh" content="0; url=/fr/">
+<style>
+  body{ margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+    background:#17231c; color:#ede6d6; font-family:'IBM Plex Mono',monospace; text-align:center; padding:20px;}
+  a{ color:#c6a15b; }
+  .links{display:flex; gap:16px; justify-content:center; margin-top:18px; flex-wrap:wrap;}
+</style>
 <script>
-  window.location.replace("fr/");
+  // Smarter redirect based on the visitor's browser language, runs before paint.
+  (function(){
+    var supported = ["fr","de","it","en"];
+    var browserLangs = navigator.languages || [navigator.language || "fr"];
+    var target = "fr";
+    for (var i = 0; i < browserLangs.length; i++){
+      var code = browserLangs[i].slice(0,2).toLowerCase();
+      if (supported.indexOf(code) !== -1){ target = code; break; }
+    }
+    window.location.replace("/" + target + "/");
+  })();
 </script>
 </head>
 <body>
@@ -22,10 +39,10 @@
     <p>Redirection… / Weiterleitung… / Reindirizzamento… / Redirecting…</p>
     <noscript>
       <div class="links">
-        <a href="/fr/index.html">Français</a>
-        <a href="/de/index.html">Deutsch</a>
-        <a href="/it/index.html">Italiano</a>
-        <a href="/en/index.html">English</a>
+        <a href="/fr/">Français</a>
+        <a href="/de/">Deutsch</a>
+        <a href="/it/">Italiano</a>
+        <a href="/en/">English</a>
       </div>
     </noscript>
   </div>
