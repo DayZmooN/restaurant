@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +9,13 @@
 <meta name="description" content="Restaurant Belvédère à Fribourg : cuisine suisse de saison.">
 <meta name="robots" content="index, follow">
 
-<link rel="canonical" href="https://www.restaurant-belvedere.ch/fr/">
+<link rel="canonical" href="https://www.restaurant-belvedere.ch/en/">
 
 <link rel="alternate" hreflang="fr" href="https://www.restaurant-belvedere.ch/fr/">
 <link rel="alternate" hreflang="de" href="https://www.restaurant-belvedere.ch/de/">
 <link rel="alternate" hreflang="it" href="https://www.restaurant-belvedere.ch/it/">
 <link rel="alternate" hreflang="en" href="https://www.restaurant-belvedere.ch/en/">
-<link rel="alternate" hreflang="x-default" href="https://www.restaurant-belvedere.ch/fr/">
+<link rel="alternate" hreflang="x-default" href="https://www.restaurant-belvedere.ch/en/">
 
 <style>
 body{
@@ -60,9 +60,9 @@ a{
     }
 
     // 2. Sinon regarde les préférences du navigateur
-    const browserLanguages = navigator.languages || [navigator.language || "fr"];
+    const browserLanguages = navigator.languages || [navigator.language || "en"];
 
-    let target = "fr";
+    let target = "en";
 
     for(const lang of browserLanguages){
 
@@ -96,14 +96,13 @@ Français / Deutsch / Italiano / English
 <p>JavaScript est désactivé.</p>
 
 <div class="links">
+<a href="/en/">English</a>
 
 <a href="/fr/">Français</a>
 
 <a href="/de/">Deutsch</a>
 
 <a href="/it/">Italiano</a>
-
-<a href="/en/">English</a>
 
 </div>
 
