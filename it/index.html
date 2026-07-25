@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="metaTitle">Restaurant Belvédère — Cucina svizzera di stagione a Friburgo</title>
+<meta id="metaDesc" name="description" content="Restaurant Belvédère a Friburgo: cucina svizzera di stagione, prodotti locali, terrazza con vista. Prenota il tuo tavolo online.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.restaurant-belvedere.ch/it/">
+<meta property="og:type" content="restaurant.restaurant">
+<meta id="ogTitle" property="og:title" content="Restaurant Belvédère — Cucina svizzera di stagione">
+<meta id="ogDesc" property="og:description" content="Cucina svizzera di stagione, prodotti locali e terrazza con vista, nel cuore di Friburgo.">
+<meta property="og:locale" content="it_CH">
+<meta property="og:site_name" content="Restaurant Belvédère">
+<link rel="alternate" hreflang="fr" href="https://www.restaurant-belvedere.ch/fr/">
+<link rel="alternate" hreflang="de" href="https://www.restaurant-belvedere.ch/de/">
+<link rel="alternate" hreflang="it" href="https://www.restaurant-belvedere.ch/it/">
+<link rel="alternate" hreflang="en" href="https://www.restaurant-belvedere.ch/en/">
+<link rel="alternate" hreflang="x-default" href="https://www.restaurant-belvedere.ch/fr/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%2317231c%22/><path d=%22M20 65 L35 35 L50 55 L65 25 L80 60%22 stroke=%22%23c6a15b%22 stroke-width=%228%22 fill=%22none%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json" id="ldJson">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Restaurant Belvédère",
+  "image": "https://www.restaurant-belvedere.ch/og-image.jpg",
+  "servesCuisine": ["Swiss", "Seasonal", "European"],
+  "priceRange": "CHF CHF CHF",
+  "telephone": "+41 26 000 00 00",
+  "email": "contact@restaurant-belvedere.ch",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Route du Belvédère 12",
+    "addressLocality": "Fribourg",
+    "postalCode": "1700",
+    "addressRegion": "FR",
+    "addressCountry": "CH"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 46.8065,
+    "longitude": 7.1615
+  },
+  "url": "https://www.restaurant-belvedere.ch/",
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"11:30","closes":"22:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"11:30","closes":"23:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"11:00","closes":"15:00"}
+  ],
+  "acceptsReservations": "True",
+  "areaServed": ["Fribourg", "Canton de Fribourg", "Suisse romande"],
+  "sameAs": ["https://www.instagram.com/", "https://www.facebook.com/"]
+}
+</script>
+<script type="application/ld+json" id="ldJsonFaq"></script>
+<style>
+  :root{
+    --bg:#17231c;
+    --bg-alt:#1f2e25;
+    --paper:#ede6d6;
+    --paper-dim:#c9c2b2;
+    --brass:#c6a15b;
+    --brass-soft:#8a713c;
+    --wine:#8a3a30;
+    --stone:#8fa093;
+    --line: rgba(237,230,214,0.14);
+    --maxw: 1180px;
+    --radius: 2px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--paper);
+    font-family:'Public Sans', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    margin:0;
+  }
+  .mono{font-family:'IBM Plex Mono', monospace;}
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  section{position:relative;}
+  ::selection{background:var(--brass); color:var(--bg);}
+  :focus-visible{outline:2px solid var(--brass); outline-offset:3px;}
+
+  /* Topographic backdrop */
+  .topo{position:absolute; inset:0; opacity:0.16; pointer-events:none; overflow:hidden;}
+  .topo svg{width:100%; height:100%;}
+
+  body{overflow-x:hidden;}
+
+  /* HEADER */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(23,35,28,0.88);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; row-gap:8px; padding:14px 28px; max-width:var(--maxw); margin:0 auto;}
+  .brand{font-family:'Fraunces', serif; font-size:1.2rem; font-weight:600; letter-spacing:0.02em; text-decoration:none; white-space:nowrap;}
+  .brand span{color:var(--brass);}
+  .links{display:flex; gap:22px; list-style:none; margin:0; padding:0;}
+  .links a{text-decoration:none; font-size:0.88rem; letter-spacing:0.02em; color:var(--paper-dim); transition:color .2s; white-space:nowrap;}
+  .links a:hover{color:var(--brass);}
+  .nav-right{display:flex; align-items:center; gap:12px; flex-shrink:0;}
+
+  /* Compact language dropdown (replaces the old 4-button row in the header) */
+  .lang-dropdown{position:relative;}
+  .lang-current{
+    display:flex; align-items:center; gap:5px; background:none; border:1px solid var(--line); color:var(--paper);
+    font-family:'IBM Plex Mono',monospace; font-size:0.75rem; padding:7px 11px; border-radius:16px; cursor:pointer; letter-spacing:0.04em;
+  }
+  .lang-current:hover{border-color:var(--brass); color:var(--brass);}
+  .lang-menu{
+    position:absolute; top:calc(100% + 8px); right:0; background:var(--bg-alt); border:1px solid var(--line);
+    border-radius:8px; padding:6px; display:none; flex-direction:column; gap:2px; min-width:110px; z-index:60;
+    box-shadow:0 10px 24px rgba(0,0,0,0.3);
+  }
+  .lang-dropdown.open .lang-menu{display:flex;}
+  .lang-menu button{
+    background:none; border:none; color:var(--paper-dim); font-family:'IBM Plex Mono',monospace; text-align:left;
+    font-size:0.8rem; padding:8px 10px; border-radius:5px; cursor:pointer;
+  }
+  .lang-menu button:hover, .lang-menu button.active{background:var(--brass); color:var(--bg);}
+
+  .btn{
+    display:inline-block; padding:10px 20px; border-radius:2px; text-decoration:none;
+    font-size:0.86rem; letter-spacing:0.03em; cursor:pointer; border:1px solid var(--brass);
+    font-family:'Public Sans',sans-serif; font-weight:600; transition:all .2s; white-space:nowrap;
+  }
+  .btn-solid{background:var(--brass); color:var(--bg);}
+  .btn-solid:hover{background:var(--paper); border-color:var(--paper);}
+  .btn-ghost{background:transparent; color:var(--paper); border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--brass); color:var(--brass);}
+  .burger{display:none; background:none; border:none; color:var(--paper); font-size:1.4rem; cursor:pointer;}
+  .theme-toggle{
+    background:none; border:1px solid var(--line); color:var(--paper); width:34px; height:34px;
+    border-radius:50%; font-size:1rem; cursor:pointer; display:flex; align-items:center; justify-content:center;
+    transition:border-color .2s, color .2s; flex-shrink:0;
+  }
+  .theme-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  /* SUB-BAR: address + phone, always visible while scrolling (desktop/tablet only) */
+  .subbar{
+    border-top:1px solid var(--line); background:var(--bg-alt);
+    display:flex; justify-content:center; gap:22px; padding:7px 20px; flex-wrap:wrap;
+  }
+  .subbar a{
+    display:inline-flex; align-items:center; gap:6px; text-decoration:none; color:var(--paper-dim);
+    font-family:'IBM Plex Mono',monospace; font-size:0.75rem; white-space:nowrap;
+  }
+  .subbar a:hover{color:var(--brass);}
+
+  /* MOBILE DRAWER */
+  .mobile-drawer{
+    position:fixed; top:0; right:0; height:100%; width:min(320px,84vw); background:var(--bg-alt);
+    border-left:1px solid var(--line); z-index:120; padding:24px; transform:translateX(100%);
+    transition:transform .3s ease; display:flex; flex-direction:column; overflow-y:auto;
+  }
+  .mobile-drawer.open{transform:translateX(0);}
+  .mobile-drawer-top{display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; padding-bottom:16px; border-bottom:1px solid var(--line);}
+  .mobile-drawer-top button{background:none; border:none; color:var(--paper); font-size:1.2rem; cursor:pointer;}
+  .mobile-links{list-style:none; margin:0; padding:0; display:grid; gap:4px;}
+  .mobile-links a{display:block; padding:14px 4px; text-decoration:none; color:var(--paper); border-bottom:1px solid var(--line); font-size:1.05rem;}
+  .mobile-langs{display:flex; gap:6px; margin-top:20px; flex-wrap:wrap;}
+  .mobile-langs button{
+    background:none; border:1px solid var(--line); color:var(--paper-dim); font-family:'IBM Plex Mono',monospace;
+    font-size:0.78rem; padding:8px 14px; border-radius:20px; cursor:pointer;
+  }
+  .mobile-langs button.active{background:var(--brass); color:var(--bg); border-color:var(--brass);}
+  .drawer-backdrop{
+    position:fixed; inset:0; background:rgba(10,14,11,0.5); z-index:110; opacity:0; pointer-events:none; transition:opacity .3s;
+  }
+  .drawer-backdrop.open{opacity:1; pointer-events:auto;}
+  body.drawer-locked{overflow:hidden;}
+
+  /* LIGHT THEME OVERRIDE */
+  html.theme-alt{
+    --bg:#EDE6D6;
+    --bg-alt:#E3D9C4;
+    --paper:#1B2620;
+    --paper-dim:#4B5850;
+    --brass:#8A6A2C;
+    --brass-soft:#6B5220;
+    --wine:#8A3A30;
+    --stone:#5C6660;
+    --line: rgba(27,38,32,0.14);
+  }
+  html.theme-alt .topo{opacity:0.10;}
+  html.theme-alt .hours-table tr.today td{font-weight:600;}
+
+  /* HERO */
+  .hero{
+    min-height:92vh; display:flex; flex-direction:column; justify-content:center;
+    padding:120px 28px 80px; overflow:hidden;
+  }
+  .hero-inner{max-width:var(--maxw); margin:0 auto; width:100%; position:relative; z-index:2;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace; text-transform:uppercase; letter-spacing:0.18em;
+    color:var(--brass); font-size:0.78rem; margin-bottom:14px; display:block;
+  }
+  .status-pill{
+    display:inline-flex; align-items:center; gap:8px; font-family:'IBM Plex Mono',monospace;
+    font-size:0.78rem; color:var(--paper-dim); border:1px solid var(--line); border-radius:20px;
+    padding:6px 14px; margin-bottom:22px;
+  }
+  .status-pill .dot{width:8px; height:8px; border-radius:50%; background:var(--stone); flex-shrink:0;}
+  .status-pill.open .dot{background:#7BA88A; box-shadow:0 0 6px #7BA88A;}
+  .status-pill.closed .dot{background:#B0453A;}
+
+  /* STICKY MOBILE ACTION BAR */
+  .mobile-actionbar{
+    display:none; position:fixed; bottom:0; left:0; right:0; z-index:80;
+    background:rgba(23,35,28,0.96); backdrop-filter:blur(10px); border-top:1px solid var(--line);
+    padding:10px 10px; padding-bottom:calc(10px + env(safe-area-inset-bottom));
+    gap:8px;
+  }
+  .mobile-actionbar a{
+    flex:1; text-align:center; padding:12px 6px; border-radius:6px; text-decoration:none;
+    font-family:'Public Sans',sans-serif; font-weight:600; font-size:0.82rem; min-height:44px;
+    display:flex; align-items:center; justify-content:center; gap:5px; white-space:nowrap;
+  }
+  .mobile-actionbar .call{background:transparent; border:1px solid var(--brass); color:var(--brass);}
+  .mobile-actionbar .book{background:var(--brass); color:var(--bg);}
+  @media (max-width: 360px){
+    .mobile-actionbar a{font-size:0.7rem; padding:12px 3px;}
+  }
+  .hero h1{
+    font-size:clamp(2.6rem, 6vw, 5.2rem); line-height:0.98; max-width:14ch;
+    font-style:italic; font-weight:500;
+  }
+  .hero p.lead{
+    max-width:46ch; margin-top:26px; font-size:1.15rem; color:var(--paper-dim);
+  }
+  .hero-ctas{display:flex; gap:16px; margin-top:40px; flex-wrap:wrap;}
+  .scrollcue{
+    margin-top:70px; font-family:'IBM Plex Mono',monospace; font-size:0.75rem;
+    color:var(--stone); display:flex; align-items:center; gap:10px;
+  }
+  .scrollcue .ln{width:40px; height:1px; background:var(--stone);}
+
+  /* SECTION HEADS */
+  .sec-head{display:flex; align-items:baseline; gap:18px; margin-bottom:48px;}
+  .sec-num{font-family:'IBM Plex Mono',monospace; color:var(--brass-soft); font-size:0.8rem;}
+  .sec-head h2{font-size:clamp(2rem,4vw,2.8rem); font-style:italic; font-weight:500;}
+  .rule{height:1px; background:var(--line); border:none; margin:0;}
+
+  /* ABOUT */
+  #about{padding:110px 0; background:var(--bg-alt);}
+  .about-grid{display:grid; grid-template-columns:1.1fr 0.9fr; gap:60px; align-items:start;}
+  .about-text p{color:var(--paper-dim); font-size:1.05rem; max-width:58ch;}
+  .about-text blockquote{
+    font-family:'Fraunces',serif; font-style:italic; font-size:1.5rem; font-weight:500;
+    border-left:2px solid var(--brass); padding-left:24px; margin:34px 0; color:var(--paper);
+  }
+  .ledger-strip{
+    font-family:'IBM Plex Mono',monospace; font-size:0.85rem; border-top:1px solid var(--line); padding-top:20px;
+  }
+  .ledger-strip .row{display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--line); color:var(--paper-dim);}
+  .ledger-strip .row span:last-child{color:var(--paper);}
+
+  /* MENU */
+  #menu{padding:110px 0;}
+  .tabs{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:46px;}
+  .tab{
+    background:none; border:1px solid var(--line); color:var(--paper-dim); padding:9px 18px;
+    border-radius:20px; font-size:0.85rem; cursor:pointer; font-family:'Public Sans',sans-serif;
+  }
+  .tab.active{border-color:var(--brass); color:var(--brass);}
+  .menu-list{display:none;}
+  .menu-list.active{display:block;}
+  .menu-item{display:flex; gap:16px; padding:22px 0; border-bottom:1px solid var(--line);}
+  .menu-item .info{flex:1;}
+  .menu-item h3{font-size:1.15rem; font-weight:600; font-family:'Public Sans',sans-serif; display:flex; align-items:baseline; gap:10px;}
+  .menu-item .dots{flex:1; border-bottom:2px dotted var(--paper-dim); opacity:0.4; margin:0 4px; transform:translateY(-4px);}
+  .menu-item .price{font-family:'IBM Plex Mono',monospace; color:var(--brass); font-size:1.05rem; white-space:nowrap;}
+  .menu-item p{margin:6px 0 0; color:var(--paper-dim); font-size:0.92rem; max-width:60ch;}
+  .menu-note{margin-top:30px; font-size:0.85rem; color:var(--stone);}
+
+  /* GALLERY */
+  #gallery{padding:110px 0; background:var(--bg-alt);}
+  .gallery-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  .gallery-grid .g1{grid-column:span 2; grid-row:span 2;}
+  .gcard{
+    position:relative; aspect-ratio:1/1; border:1px solid var(--line);
+    background:linear-gradient(160deg, rgba(198,161,91,0.16), rgba(23,35,28,0.5));
+    display:flex; align-items:flex-end; padding:18px; overflow:hidden;
+  }
+  .gallery-grid .g1{aspect-ratio:auto;}
+  .gcard::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      repeating-linear-gradient(45deg, transparent, transparent 26px, rgba(237,230,214,0.05) 26px, rgba(237,230,214,0.05) 27px);
+  }
+  .gcard .cap{position:relative; font-family:'IBM Plex Mono',monospace; font-size:0.78rem; color:var(--paper-dim);}
+  .gcard .ico{position:absolute; top:18px; right:18px; font-size:1.3rem; opacity:0.5;}
+
+  /* HOURS / LOCATION */
+  #visit{padding:110px 0;}
+  .visit-grid{display:grid; grid-template-columns:1fr 1fr; gap:60px;}
+  .hours-table{width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:0.92rem;}
+  .hours-table tr{border-bottom:1px solid var(--line);}
+  .hours-table td{padding:12px 0; color:var(--paper-dim);}
+  .hours-table td:last-child{text-align:right; color:var(--paper);}
+  .hours-table tr.today td{color:var(--brass);}
+  .addr-block{margin-top:30px;}
+  .addr-block p{margin:4px 0; color:var(--paper-dim);}
+  .map-frame{border:1px solid var(--line); margin-top:20px; filter:grayscale(0.4) invert(0.92) contrast(0.9);}
+  .gmaps-link{display:inline-block; margin-top:10px; font-size:0.78rem; color:var(--brass); text-decoration:none; border-bottom:1px dotted var(--brass);}
+  .gmaps-link:hover{color:var(--paper);}
+
+  /* REVIEWS */
+  #reviews{padding:80px 0; background:var(--bg-alt);}
+  .reviews-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .review-card{border:1px solid var(--line); padding:24px; border-radius:2px;}
+  .review-stars{color:var(--brass); font-size:0.9rem; letter-spacing:2px; margin-bottom:12px;}
+  .review-text{color:var(--paper-dim); font-size:0.95rem; font-style:italic; margin:0;}
+  .review-author{margin-top:14px; font-family:'IBM Plex Mono',monospace; font-size:0.78rem; color:var(--stone);}
+
+  /* FAQ */
+  #faq{padding:80px 0;}
+  .faq-list{max-width:760px;}
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-q{
+    width:100%; text-align:left; background:none; border:none; color:var(--paper); cursor:pointer;
+    padding:20px 0; font-family:'Public Sans',sans-serif; font-size:1rem; font-weight:600;
+    display:flex; justify-content:space-between; align-items:center; gap:16px;
+  }
+  .faq-q:hover{color:var(--brass);}
+  .faq-q .plus{font-family:'IBM Plex Mono',monospace; color:var(--brass); font-size:1.1rem; transition:transform .2s; flex-shrink:0;}
+  .faq-item.open .faq-q .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0; overflow:hidden; transition:max-height .25s ease;}
+  .faq-a p{margin:0 0 20px; color:var(--paper-dim); font-size:0.95rem; max-width:64ch;}
+  .faq-item.open .faq-a{max-height:240px;}
+
+  /* RESERVATION */
+  #reserve{padding:110px 0;}
+  .res-grid{display:grid; grid-template-columns:1fr 1fr; gap:60px;}
+  form.res-form{display:grid; gap:16px;}
+  .res-form .row2{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  label{font-size:0.8rem; color:var(--stone); font-family:'IBM Plex Mono',monospace; display:block; margin-bottom:6px;}
+  input, select, textarea{
+    width:100%; background:var(--bg); border:1px solid var(--line); color:var(--paper);
+    padding:12px 14px; font-family:'Public Sans',sans-serif; font-size:0.95rem; border-radius:2px;
+  }
+  input:focus, select:focus, textarea:focus{border-color:var(--brass);}
+  .res-side p{color:var(--paper-dim);}
+
+  /* FOOTER */
+  footer{padding:70px 0 30px; border-top:1px solid var(--line);}
+  .foot-grid{display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:40px; margin-bottom:50px;}
+  .foot-grid h4{font-family:'IBM Plex Mono',monospace; font-size:0.78rem; color:var(--brass); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:16px;}
+  .foot-grid ul{list-style:none; padding:0; margin:0; display:grid; gap:10px;}
+  .foot-grid a{text-decoration:none; color:var(--paper-dim); font-size:0.92rem;}
+  .foot-grid a:hover{color:var(--brass);}
+  .foot-bottom{display:flex; justify-content:space-between; align-items:center; font-size:0.8rem; color:var(--stone); flex-wrap:wrap; gap:10px;}
+  .admin-trigger{background:none; border:none; color:var(--stone); font-size:0.75rem; cursor:pointer; text-decoration:underline; font-family:'IBM Plex Mono',monospace;}
+
+  /* ADMIN */
+  #adminOverlay{
+    position:fixed; inset:0; background:rgba(10,14,11,0.7); z-index:200;
+    display:none; align-items:flex-start; justify-content:center; overflow:auto; padding:40px 16px;
+  }
+  #adminOverlay.open{display:flex;}
+  .admin-panel{
+    background:var(--bg); border:1px solid var(--brass-soft); max-width:900px; width:100%;
+    padding:36px; border-radius:4px;
+  }
+  .admin-panel h2{font-size:1.5rem; margin-bottom:6px;}
+  .admin-sub{color:var(--stone); font-size:0.85rem; margin-bottom:26px;}
+  .admin-tabs{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:26px; border-bottom:1px solid var(--line); padding-bottom:16px;}
+  .admin-tabs button{
+    background:none; border:1px solid var(--line); color:var(--paper-dim); padding:7px 14px;
+    border-radius:16px; font-size:0.78rem; cursor:pointer;
+  }
+  .admin-tabs button.active{background:var(--brass); color:var(--bg); border-color:var(--brass);}
+  .admin-section{display:none;}
+  .admin-section.active{display:block;}
+  .field-group{border:1px solid var(--line); padding:16px; border-radius:3px; margin-bottom:14px;}
+  .field-group .langrow{display:grid; grid-template-columns:44px 1fr; gap:10px; align-items:center; margin-bottom:8px;}
+  .field-group .langrow span{font-family:'IBM Plex Mono',monospace; font-size:0.7rem; color:var(--brass-soft);}
+  .field-group input, .field-group textarea{font-size:0.85rem; padding:8px 10px;}
+  .field-group textarea{min-height:52px; resize:vertical;}
+  .item-actions{display:flex; justify-content:flex-end; gap:8px; margin-top:6px;}
+  .small-btn{
+    background:none; border:1px solid var(--line); color:var(--paper-dim); padding:6px 12px;
+    font-size:0.75rem; border-radius:14px; cursor:pointer;
+  }
+  .small-btn.danger{border-color:var(--wine); color:var(--wine);}
+  .small-btn:hover{border-color:var(--brass); color:var(--brass);}
+  .admin-actions{display:flex; gap:10px; margin-top:26px; flex-wrap:wrap; justify-content:space-between; border-top:1px solid var(--line); padding-top:22px;}
+  .admin-actions .left{display:flex; gap:10px; flex-wrap:wrap;}
+  #passGate{max-width:380px; margin:120px auto; text-align:center;}
+  #passGate input{margin:16px 0; text-align:center;}
+  .cat-title-row{display:flex; justify-content:space-between; align-items:center; margin:26px 0 10px;}
+  .cat-title-row h4{font-family:'IBM Plex Mono',monospace; font-size:0.85rem; color:var(--brass); text-transform:uppercase; letter-spacing:0.06em;}
+
+  @media (max-width: 880px){
+    .links{display:none;}
+    .subbar{display:none;}
+    .burger{display:block;}
+    .about-grid, .visit-grid, .res-grid{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr;}
+    .gallery-grid{grid-template-columns:repeat(2,1fr);}
+    .gallery-grid .g1{grid-column:span 2;}
+    .reviews-grid{grid-template-columns:1fr;}
+    .mobile-actionbar{display:flex;}
+    body{padding-bottom:74px;}
+    .tab{padding:12px 20px; min-height:44px;}
+    .nav{padding:12px 16px;}
+    .ctaReserve, #ctaReserve{display:none;}
+    footer{padding-bottom:90px;}
+  }
+  @media (max-width: 400px){
+    .lang-current span:last-child{display:none;}
+  }
+  @media (max-height: 500px) and (orientation: landscape){
+    .hero{min-height:auto; padding-top:100px; padding-bottom:40px;}
+    .scrollcue{margin-top:30px;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="nav">
+    <a href="#top" class="brand" id="brandName">Restaurant <span>Belvédère</span></a>
+    <ul class="links" id="navLinks"></ul>
+    <div class="nav-right">
+      <div class="lang-dropdown" id="langDropdown">
+        <button class="lang-current" id="langCurrentBtn" aria-haspopup="true" aria-expanded="false">FR <span>▾</span></button>
+        <div class="lang-menu" id="langMenu"></div>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème" title="Mode clair / sombre">◐</button>
+      <a href="#reserve" class="btn btn-solid" id="ctaReserve">Réserver</a>
+      <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <div class="subbar">
+    <a href="tel:+41260000000" id="subbarPhone">📞 +41 26 000 00 00</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=46.8065,7.1615" target="_blank" rel="noopener" id="subbarAddr">📍 Route du Belvédère 12, Fribourg</a>
+  </div>
+</header>
+
+<div id="mobileDrawer" class="mobile-drawer">
+  <div class="mobile-drawer-top">
+    <span class="mono" id="mobileDrawerLabel">Menu</span>
+    <button id="closeMobileDrawer" aria-label="Fermer le menu">✕</button>
+  </div>
+  <ul class="mobile-links" id="mobileLinks"></ul>
+  <div class="mobile-langs" id="mobileLangSwitch"></div>
+  <a href="#reserve" class="btn btn-solid" id="mobileCta" style="text-align:center; margin-top:20px;">Réserver</a>
+</div>
+<div id="drawerBackdrop" class="drawer-backdrop"></div>
+
+<div class="mobile-actionbar">
+  <a href="tel:+41260000000" class="call" id="mobileCall">📞 Appeler</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=46.8065,7.1615" target="_blank" rel="noopener" class="call" id="mobileItinerary">🧭 Itinéraire</a>
+  <a href="#reserve" class="book" id="mobileBook">Réserver</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="topo" aria-hidden="true">
+    <svg viewBox="0 0 1200 700" preserveAspectRatio="none">
+      <path d="M-50 600 C 150 500, 250 620, 400 520 S 650 420, 800 520 S 1050 460, 1250 540" stroke="#c6a15b" stroke-width="1.5" fill="none"/>
+      <path d="M-50 520 C 150 430, 260 540, 420 450 S 660 350, 810 450 S 1040 400, 1250 460" stroke="#c6a15b" stroke-width="1.5" fill="none"/>
+      <path d="M-50 440 C 160 360, 270 450, 430 380 S 670 290, 820 380 S 1030 340, 1250 380" stroke="#c6a15b" stroke-width="1" fill="none"/>
+      <path d="M-50 360 C 170 300, 280 370, 440 320 S 680 250, 830 320 S 1020 290, 1250 310" stroke="#c6a15b" stroke-width="1" fill="none"/>
+    </svg>
+  </div>
+  <div class="hero-inner">
+    <span class="eyebrow" id="heroEyebrow">Fribourg · Suisse</span>
+    <span class="status-pill" id="statusPill"><span class="dot" id="statusDot"></span><span id="statusText">Ouvert maintenant</span></span>
+    <h1 id="heroTitle">Une table qui suit le rythme des saisons</h1>
+    <p class="lead" id="heroLead">Produits locaux, cave de vins suisses et vue sur la vieille ville — à quelques pas de la cathédrale.</p>
+    <div class="hero-ctas">
+      <a href="#reserve" class="btn btn-solid" id="heroCta1">Réserver une table</a>
+      <a href="#menu" class="btn btn-ghost" id="heroCta2">Découvrir la carte</a>
+    </div>
+    <div class="scrollcue"><div class="ln"></div><span id="scrollLabel">Découvrir</span></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><h2 id="aboutTitle">Notre histoire</h2></div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p id="aboutText">Ouvert en 2019 dans une ancienne maison de maître, le Belvédère marie la précision de la cuisine suisse à des influences de saison. Le marché du jeudi et les producteurs du canton dictent la carte, pas l'inverse.</p>
+        <blockquote id="aboutQuote">« Le meilleur ingrédient reste le temps qu'on lui laisse. »</blockquote>
+      </div>
+      <div class="ledger-strip">
+        <div class="row"><span id="lblFounded">Ouverture</span><span id="valFounded">2019</span></div>
+        <div class="row"><span id="lblSeats">Places assises</span><span id="valSeats">42 + terrasse 20</span></div>
+        <div class="row"><span id="lblChef">Chef de cuisine</span><span id="valChef">M. Dupasquier</span></div>
+        <div class="row"><span id="lblStyle">Style</span><span id="valStyle">Cuisine suisse de saison</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENU ============ -->
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><h2 id="menuTitle">La carte</h2></div>
+    <div class="tabs" id="menuTabs"></div>
+    <div id="menuLists"></div>
+    <p class="menu-note" id="menuNote">Prix en francs suisses (CHF), TVA comprise. Carte des allergènes sur demande.</p>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><h2 id="galleryTitle">L'ambiance</h2></div>
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ============ VISIT ============ -->
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><h2 id="visitTitle">Horaires & accès</h2></div>
+    <div class="visit-grid">
+      <div>
+        <table class="hours-table" id="hoursTable"></table>
+      </div>
+      <div>
+        <div class="addr-block">
+          <p class="mono" id="addrLine1">Route du Belvédère 12</p>
+          <p class="mono" id="addrLine2">1700 Fribourg, Suisse</p>
+          <p class="mono" id="addrPhone">+41 26 000 00 00</p>
+          <p class="mono" id="addrEmail">contact@restaurant-belvedere.ch</p>
+        </div>
+        <iframe class="map-frame" width="100%" height="220" loading="lazy" title="Localisation"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=7.14%2C46.79%2C7.18%2C46.82&layer=mapnik&marker=46.8065%2C7.1615"></iframe>
+        <a href="https://www.google.com/maps/search/?api=1&query=46.8065,7.1615" target="_blank" rel="noopener" class="gmaps-link mono" id="gmapsLink">Voir sur Google Maps ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AVIS / SOCIAL PROOF ============ -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04.5</span><h2 id="reviewsTitle">Ils en parlent</h2></div>
+    <div class="reviews-grid" id="reviewsGrid"></div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04.7</span><h2 id="faqTitle">Questions fréquentes</h2></div>
+    <div class="faq-list" id="faqList"></div>
+  </div>
+</section>
+
+<!-- ============ RESERVATION ============ -->
+<section id="reserve">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">05</span><h2 id="reserveTitle">Réserver une table</h2></div>
+    <div class="res-grid">
+      <form class="res-form" id="resForm">
+        <div class="row2">
+          <div><label id="lblName">Nom</label><input type="text" id="rName" required></div>
+          <div><label id="lblPhone">Téléphone</label><input type="tel" id="rPhone" required></div>
+        </div>
+        <div class="row2">
+          <div><label id="lblDate">Date</label><input type="date" id="rDate" required></div>
+          <div><label id="lblTime">Heure</label><input type="time" id="rTime" required></div>
+        </div>
+        <div><label id="lblGuests">Nombre de personnes</label><input type="number" id="rGuests" min="1" max="20" value="2" required></div>
+        <div><label id="lblMsg">Message (optionnel)</label><textarea id="rMsg" rows="3"></textarea></div>
+        <button type="submit" class="btn btn-solid" id="rSubmit" style="border:none;">Envoyer la demande</button>
+      </form>
+      <div class="res-side">
+        <p id="resNote">Votre demande ouvre votre messagerie avec les détails pré-remplis. Nous confirmons chaque réservation par téléphone ou e-mail sous 24h.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand" style="margin-bottom:12px; display:inline-block;" id="footBrand">Restaurant <span style="color:var(--brass)">Belvédère</span></div>
+        <p style="color:var(--paper-dim); font-size:0.9rem; max-width:34ch;" id="footTagline">Cuisine suisse de saison, au cœur de Fribourg.</p>
+      </div>
+      <div>
+        <h4 id="footNavTitle">Navigation</h4>
+        <ul id="footNav"></ul>
+      </div>
+      <div>
+        <h4 id="footContactTitle">Contact</h4>
+        <ul>
+          <li id="footPhone">+41 26 000 00 00</li>
+          <li id="footEmail">contact@restaurant-belvedere.ch</li>
+          <li><a href="#" id="footInsta">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span id="copyright">© 2026 Restaurant Belvédère — Fribourg, Suisse</span>
+      <button class="admin-trigger" id="openAdmin">Gestion du site</button>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ ADMIN OVERLAY ============ -->
+<div id="adminOverlay">
+  <div class="admin-panel">
+    <div id="passGate">
+      <h2>Espace de gestion</h2>
+      <p class="admin-sub">Accès réservé à l'équipe. (Protection simple côté navigateur — ne pas utiliser comme unique sécurité sur un vrai site.)</p>
+      <input type="password" id="passInput" placeholder="Mot de passe">
+      <div><button class="btn btn-solid" id="passSubmit">Entrer</button> <button class="btn btn-ghost" id="passCancel">Annuler</button></div>
+      <p style="font-size:0.75rem; color:var(--stone); margin-top:14px;">Mot de passe par défaut : <strong>belvedere2026</strong> — à changer dans le code (variable ADMIN_PASSWORD).</p>
+    </div>
+    <div id="adminBody" style="display:none;">
+      <h2>Gestion du contenu</h2>
+      <p class="admin-sub">Modifiez chaque partie du site, puis exportez le fichier pour l'appliquer définitivement.</p>
+      <div class="admin-tabs">
+        <button data-tab="general" class="active">Général</button>
+        <button data-tab="hero">Hero</button>
+        <button data-tab="about">À propos</button>
+        <button data-tab="menu">Carte</button>
+        <button data-tab="gallery">Galerie</button>
+        <button data-tab="reviews">Avis</button>
+        <button data-tab="faq">FAQ</button>
+        <button data-tab="hours">Horaires</button>
+        <button data-tab="contact">Contact</button>
+      </div>
+      <div id="adminSections"></div>
+      <div class="admin-actions">
+        <div class="left">
+          <button class="btn btn-ghost" id="exportBtn">⬇ Exporter le contenu (JSON)</button>
+          <label class="btn btn-ghost" style="cursor:pointer;">⬆ Importer un JSON<input type="file" id="importInput" accept=".json" style="display:none;"></label>
+        </div>
+        <button class="btn btn-ghost" id="closeAdmin">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const ADMIN_PASSWORD = "belvedere2026";
+const LANGS = ["fr","de","it","en"];
+const LANG_LABELS = {fr:"FR", de:"DE", it:"IT", en:"EN"};
+
+/* ---------- UI CHROME STRINGS (fixed labels per language) ---------- */
+const UI = {
+  fr:{nav:["À propos","La carte","Ambiance","Horaires & Accès"], reserve:"Réserver", reserveTitle:"Réserver une table", scroll:"Découvrir",
+      lblFounded:"Ouverture", lblSeats:"Places assises", lblChef:"Chef de cuisine", lblStyle:"Style",
+      menuNote:"Prix en francs suisses (CHF), TVA comprise. Carte des allergènes sur demande.",
+      form:{name:"Nom",phone:"Téléphone",date:"Date",time:"Heure",guests:"Nombre de personnes",msg:"Message (optionnel)",submit:"Envoyer la demande"},
+      footNav:"Navigation", footContact:"Contact", admin:"Gestion du site",
+      today:["Lun","Mar","Mer","Jeu","Ven","Sam","Dim"], closed:"Fermé", itinerary:"Itinéraire", call:"Appeler",
+      resNote:"Votre demande ouvre votre messagerie avec les détails pré-remplis. Nous confirmons chaque réservation par téléphone ou e-mail sous 24h."},
+  de:{nav:["Über uns","Speisekarte","Ambiente","Öffnungszeiten"], reserve:"Reservieren", reserveTitle:"Tisch reservieren", scroll:"Entdecken",
+      lblFounded:"Eröffnung", lblSeats:"Sitzplätze", lblChef:"Küchenchef", lblStyle:"Stil",
+      menuNote:"Preise in Schweizer Franken (CHF), inkl. MwSt. Allergenkarte auf Anfrage.",
+      form:{name:"Name",phone:"Telefon",date:"Datum",time:"Uhrzeit",guests:"Anzahl Personen",msg:"Nachricht (optional)",submit:"Anfrage senden"},
+      footNav:"Navigation", footContact:"Kontakt", admin:"Website verwalten",
+      today:["Mo","Di","Mi","Do","Fr","Sa","So"], closed:"Geschlossen", itinerary:"Anfahrt", call:"Anrufen",
+      resNote:"Ihre Anfrage öffnet Ihr E-Mail-Programm mit den vorausgefüllten Angaben. Wir bestätigen jede Reservierung telefonisch oder per E-Mail innerhalb von 24 Stunden."},
+  it:{nav:["Chi siamo","Il menu","Atmosfera","Orari & Accesso"], reserve:"Prenotare", reserveTitle:"Prenota un tavolo", scroll:"Scopri di più",
+      lblFounded:"Apertura", lblSeats:"Posti a sedere", lblChef:"Chef di cucina", lblStyle:"Stile",
+      menuNote:"Prezzi in franchi svizzeri (CHF), IVA inclusa. Carta degli allergeni su richiesta.",
+      form:{name:"Nome",phone:"Telefono",date:"Data",time:"Ora",guests:"Numero di persone",msg:"Messaggio (facoltativo)",submit:"Invia richiesta"},
+      footNav:"Navigazione", footContact:"Contatto", admin:"Gestione del sito",
+      today:["Lun","Mar","Mer","Gio","Ven","Sab","Dom"], closed:"Chiuso", itinerary:"Itinerario", call:"Chiama",
+      resNote:"La tua richiesta apre il tuo programma di posta con i dettagli precompilati. Confermiamo ogni prenotazione per telefono o e-mail entro 24 ore."},
+  en:{nav:["About","Menu","Atmosphere","Hours & Location"], reserve:"Reserve a table", reserveTitle:"Reserve a table", scroll:"Discover",
+      lblFounded:"Opened", lblSeats:"Seating", lblChef:"Head chef", lblStyle:"Style",
+      menuNote:"Prices in Swiss francs (CHF), VAT included. Allergen list on request.",
+      form:{name:"Name",phone:"Phone",date:"Date",time:"Time",guests:"Guests",msg:"Message (optional)",submit:"Send request"},
+      footNav:"Navigation", footContact:"Contact", admin:"Manage site",
+      today:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"], closed:"Closed", itinerary:"Directions", call:"Call",
+      resNote:"Your request opens your mail app with the details pre-filled. We confirm every reservation by phone or e-mail within 24 hours."}
+};
+
+
+/* ---------- EDITABLE CONTENT (per-field, per-language) ---------- */
+let CONTENT = {
+  site:{
+    name:{fr:"Restaurant Belvédère", de:"Restaurant Belvédère", it:"Restaurant Belvédère", en:"Restaurant Belvédère"},
+    metaTitle:{fr:"Restaurant Belvédère — Cuisine suisse de saison à Fribourg", de:"Restaurant Belvédère — Saisonale Schweizer Küche in Freiburg", it:"Restaurant Belvédère — Cucina svizzera di stagione a Friburgo", en:"Restaurant Belvédère — Seasonal Swiss cuisine in Fribourg"},
+    metaDesc:{fr:"Cuisine suisse de saison, produits locaux, terrasse avec vue à Fribourg. Réservez votre table en ligne.", de:"Saisonale Schweizer Küche, lokale Produkte, Terrasse mit Aussicht in Freiburg. Tisch online reservieren.", it:"Cucina svizzera di stagione, prodotti locali, terrazza con vista a Friburgo. Prenota il tuo tavolo online.", en:"Seasonal Swiss cuisine, local produce, terrace with a view in Fribourg. Book your table online."},
+    tagline:{fr:"Cuisine suisse de saison, au cœur de Fribourg.", de:"Saisonale Schweizer Küche, im Herzen von Freiburg.", it:"Cucina svizzera di stagione, nel cuore di Friburgo.", en:"Seasonal Swiss cuisine, in the heart of Fribourg."}
+  },
+  hero:{
+    eyebrow:{fr:"Fribourg · Suisse", de:"Freiburg · Schweiz", it:"Friburgo · Svizzera", en:"Fribourg · Switzerland"},
+    title:{fr:"Une table qui suit le rythme des saisons", de:"Ein Tisch im Rhythmus der Jahreszeiten", it:"Una tavola che segue il ritmo delle stagioni", en:"A table that follows the rhythm of the seasons"},
+    lead:{fr:"Produits locaux, cave de vins suisses et vue sur la vieille ville — à quelques pas de la cathédrale.", de:"Lokale Produkte, Schweizer Weinkeller und Blick auf die Altstadt — nur wenige Schritte von der Kathedrale entfernt.", it:"Prodotti locali, cantina di vini svizzeri e vista sulla città vecchia — a pochi passi dalla cattedrale.", en:"Local produce, a Swiss wine cellar and a view of the old town — a few steps from the cathedral."},
+    cta1:{fr:"Réserver une table", de:"Tisch reservieren", it:"Prenota un tavolo", en:"Reserve a table"},
+    cta2:{fr:"Découvrir la carte", de:"Speisekarte entdecken", it:"Scopri il menu", en:"View the menu"}
+  },
+  about:{
+    title:{fr:"Notre histoire", de:"Unsere Geschichte", it:"La nostra storia", en:"Our story"},
+    text:{fr:"Ouvert en 2019 dans une ancienne maison de maître, le Belvédère marie la précision de la cuisine suisse à des influences de saison. Le marché du jeudi et les producteurs du canton dictent la carte, pas l'inverse.", de:"Das 2019 in einem alten Herrenhaus eröffnete Belvédère verbindet die Präzision der Schweizer Küche mit saisonalen Einflüssen. Der Donnerstagsmarkt und die Produzenten des Kantons bestimmen die Karte — nicht umgekehrt.", it:"Aperto nel 2019 in un'antica casa signorile, il Belvédère unisce la precisione della cucina svizzera a influenze di stagione. Il mercato del giovedì e i produttori del cantone dettano il menu, non il contrario.", en:"Opened in 2019 in a former manor house, Belvédère blends the precision of Swiss cooking with seasonal influences. The Thursday market and the canton's producers dictate the menu — not the other way around."},
+    quote:{fr:"« Le meilleur ingrédient reste le temps qu'on lui laisse. »", de:"«Die beste Zutat ist die Zeit, die man ihr lässt.»", it:"«Il miglior ingrediente resta il tempo che gli si concede.»", en:"\"The best ingredient is still the time you give it.\""},
+    founded:"2019", seats:{fr:"42 + terrasse 20", de:"42 + Terrasse 20", it:"42 + terrazza 20", en:"42 + 20 terrace"}, chef:"M. Dupasquier"
+  },
+  menu:{
+    categories:[
+      { name:{fr:"Entrées", de:"Vorspeisen", it:"Antipasti", en:"Starters"}, items:[
+        { name:{fr:"Velouté de courge du marché", de:"Kürbiscremesuppe vom Markt", it:"Vellutata di zucca del mercato", en:"Market pumpkin velouté"}, desc:{fr:"Graines torréfiées, huile de noisette", de:"Geröstete Kerne, Haselnussöl", it:"Semi tostati, olio di nocciola", en:"Toasted seeds, hazelnut oil"}, price:"16" },
+        { name:{fr:"Truite fumée du lac", de:"Geräucherte Seeforelle", it:"Trota di lago affumicata", en:"Smoked lake trout"}, desc:{fr:"Crème acidulée, betterave, aneth", de:"Sauerrahm, Randen, Dill", it:"Panna acidula, barbabietola, aneto", en:"Tangy cream, beetroot, dill"}, price:"19" }
+      ]},
+      { name:{fr:"Plats", de:"Hauptgänge", it:"Piatti principali", en:"Mains"}, items:[
+        { name:{fr:"Joue de bœuf braisée, polenta", de:"Geschmorte Rinderbacke, Polenta", it:"Guancia di manzo brasata, polenta", en:"Braised beef cheek, polenta"}, desc:{fr:"Jus corsé, légumes racines", de:"Kräftiger Jus, Wurzelgemüse", it:"Fondo di cottura, verdure radice", en:"Rich jus, root vegetables"}, price:"38" },
+        { name:{fr:"Filets de perche du lac", de:"Eglifilets vom See", it:"Filetti di persico di lago", en:"Lake perch fillets"}, desc:{fr:"Beurre noisette, amandes, salade", de:"Nussbutter, Mandeln, Salat", it:"Burro alla nocciola, mandorle, insalata", en:"Brown butter, almonds, salad"}, price:"34" }
+      ]},
+      { name:{fr:"Desserts", de:"Desserts", it:"Dessert", en:"Desserts"}, items:[
+        { name:{fr:"Meringue double crème", de:"Meringue mit Doppelrahm", it:"Meringa con panna doppia", en:"Meringue with double cream"}, desc:{fr:"Fruits rouges de saison", de:"Saisonale Beeren", it:"Frutti di bosco di stagione", en:"Seasonal red berries"}, price:"12" }
+      ]}
+    ]
+  },
+  gallery:[
+    {caption:{fr:"La salle", de:"Der Gastraum", it:"La sala", en:"The dining room"}},
+    {caption:{fr:"La terrasse", de:"Die Terrasse", it:"La terrazza", en:"The terrace"}},
+    {caption:{fr:"En cuisine", de:"In der Küche", it:"In cucina", en:"In the kitchen"}},
+    {caption:{fr:"La cave à vins", de:"Der Weinkeller", it:"La cantina", en:"The wine cellar"}},
+    {caption:{fr:"Un dressage", de:"Ein Gericht", it:"Un piatto", en:"A dish"}}
+  ],
+  hours:[
+    {day:{fr:"Lundi",de:"Montag",it:"Lunedì",en:"Monday"}, text:"Fermé", closed:true},
+    {day:{fr:"Mardi",de:"Dienstag",it:"Martedì",en:"Tuesday"}, text:"11h30 – 22h00", closed:false},
+    {day:{fr:"Mercredi",de:"Mittwoch",it:"Mercoledì",en:"Wednesday"}, text:"11h30 – 22h00", closed:false},
+    {day:{fr:"Jeudi",de:"Donnerstag",it:"Giovedì",en:"Thursday"}, text:"11h30 – 22h00", closed:false},
+    {day:{fr:"Vendredi",de:"Freitag",it:"Venerdì",en:"Friday"}, text:"11h30 – 23h00", closed:false},
+    {day:{fr:"Samedi",de:"Samstag",it:"Sabato",en:"Saturday"}, text:"11h30 – 23h00", closed:false},
+    {day:{fr:"Dimanche",de:"Sonntag",it:"Domenica",en:"Sunday"}, text:"11h00 – 15h00", closed:false}
+  ],
+  location:{ addr1:"Route du Belvédère 12", addr2:"1700 Fribourg, Suisse" },
+  contact:{ phone:"+41 26 000 00 00", email:"contact@restaurant-belvedere.ch", instagram:"https://www.instagram.com/" },
+  reviews:{
+    title:{fr:"Ils en parlent", de:"Das sagen unsere Gäste", it:"Ne parlano così", en:"What guests are saying"},
+    items:[
+      { author:"Sophie M.", rating:5, text:{fr:"Un accueil chaleureux et une cuisine qui respecte vraiment les saisons. On y retourne à chaque fois avec plaisir.", de:"Ein herzlicher Empfang und eine Küche, die die Saisons wirklich respektiert. Wir kommen immer wieder gerne zurück.", it:"Un'accoglienza calorosa e una cucina che rispetta davvero le stagioni. Ci torniamo sempre con piacere.", en:"A warm welcome and cooking that truly respects the seasons. We come back every time with pleasure."} },
+      { author:"Marc D.", rating:5, text:{fr:"La terrasse avec vue sur la vieille ville est magique en été. Service impeccable.", de:"Die Terrasse mit Blick auf die Altstadt ist im Sommer magisch. Tadelloser Service.", it:"La terrazza con vista sulla città vecchia è magica d'estate. Servizio impeccabile.", en:"The terrace overlooking the old town is magical in summer. Impeccable service."} },
+      { author:"Laura P.", rating:4, text:{fr:"Très bonne adresse pour un repas de saison, la joue de bœuf braisée était excellente.", de:"Sehr gute Adresse für ein saisonales Essen, die geschmorte Rinderbacke war ausgezeichnet.", it:"Ottimo indirizzo per un pasto di stagione, la guancia di manzo brasata era eccellente.", en:"Great place for a seasonal meal, the braised beef cheek was excellent."} }
+    ]
+  },
+  faq:{
+    title:{fr:"Questions fréquentes", de:"Häufige Fragen", it:"Domande frequenti", en:"Frequently asked questions"},
+    items:[
+      { q:{fr:"Faut-il réserver pour manger au Restaurant Belvédère ?", de:"Muss man im Restaurant Belvédère reservieren?", it:"È necessario prenotare al Restaurant Belvédère?", en:"Do I need to book a table at Restaurant Belvédère?"},
+        a:{fr:"La réservation est conseillée, surtout le week-end et en soirée, mais nous accueillons aussi les personnes de passage selon les places disponibles.", de:"Eine Reservierung wird empfohlen, besonders am Wochenende und abends, aber wir empfangen auch Laufkundschaft nach Verfügbarkeit.", it:"La prenotazione è consigliata, soprattutto nel weekend e la sera, ma accogliamo anche chi arriva senza prenotazione, in base ai posti disponibili.", en:"Booking is recommended, especially in the evening and on weekends, but we also welcome walk-ins depending on availability."} },
+      { q:{fr:"Où se trouve le restaurant et comment y accéder ?", de:"Wo befindet sich das Restaurant und wie erreicht man es?", it:"Dove si trova il ristorante e come raggiungerlo?", en:"Where is the restaurant and how do I get there?"},
+        a:{fr:"Nous sommes situés Route du Belvédère 12, à Fribourg, à quelques pas de la vieille ville. Un parking public se trouve à proximité.", de:"Wir befinden uns an der Route du Belvédère 12 in Freiburg, nur wenige Schritte von der Altstadt entfernt. In der Nähe gibt es einen öffentlichen Parkplatz.", it:"Ci troviamo in Route du Belvédère 12, a Friburgo, a pochi passi dalla città vecchia. Nelle vicinanze si trova un parcheggio pubblico.", en:"We're located at Route du Belvédère 12 in Fribourg, a short walk from the old town. Public parking is available nearby."} },
+      { q:{fr:"Quels types de plats propose la carte ?", de:"Welche Art von Gerichten bietet die Karte?", it:"Che tipo di piatti propone il menu?", en:"What kind of dishes are on the menu?"},
+        a:{fr:"Une cuisine suisse de saison basée sur des produits locaux, avec des classiques revisités et une cave de vins suisses.", de:"Eine saisonale Schweizer Küche mit lokalen Produkten, neu interpretierten Klassikern und einem Schweizer Weinkeller.", it:"Una cucina svizzera di stagione basata su prodotti locali, con classici rivisitati e una cantina di vini svizzeri.", en:"Seasonal Swiss cuisine built on local produce, with reinvented classics and a Swiss wine cellar."} },
+      { q:{fr:"Le restaurant convient-il aux groupes ou événements privés ?", de:"Eignet sich das Restaurant für Gruppen oder private Anlässe?", it:"Il ristorante è adatto a gruppi o eventi privati?", en:"Is the restaurant suitable for groups or private events?"},
+        a:{fr:"Oui, la salle et la terrasse peuvent accueillir des groupes. Contactez-nous par téléphone ou e-mail pour organiser votre événement.", de:"Ja, der Gastraum und die Terrasse können Gruppen aufnehmen. Kontaktieren Sie uns telefonisch oder per E-Mail, um Ihren Anlass zu organisieren.", it:"Sì, la sala e la terrazza possono accogliere gruppi. Contattaci per telefono o e-mail per organizzare il tuo evento.", en:"Yes, the dining room and terrace can accommodate groups. Contact us by phone or e-mail to arrange your event."} }
+    ]
+  }
+};
+
+let currentLang = "it";
+let isAdmin = false;
+let editing = false;
+
+const STATUS = {
+  fr:{open:"Ouvert maintenant", closedNow:"Fermé pour le moment", closedToday:"Fermé aujourd'hui", opens:"Ouvre", today:"aujourd'hui", tomorrow:"demain", at:"à"},
+  de:{open:"Jetzt geöffnet", closedNow:"Momentan geschlossen", closedToday:"Heute geschlossen", opens:"Öffnet", today:"heute", tomorrow:"morgen", at:"um"},
+  it:{open:"Aperto ora", closedNow:"Chiuso al momento", closedToday:"Chiuso oggi", opens:"Apre", today:"oggi", tomorrow:"domani", at:"alle"},
+  en:{open:"Open now", closedNow:"Closed at the moment", closedToday:"Closed today", opens:"Opens", today:"today", tomorrow:"tomorrow", at:"at"}
+};
+
+// Finds the next day (starting the day after startIdx) that has opening hours, and its opening time.
+function findNextOpening(startIdx){
+  for(let i=1; i<=7; i++){
+    const idx = (startIdx + i) % 7;
+    const day = CONTENT.hours[idx];
+    if(!day.closed){
+      const m = day.text.match(/(\d{1,2})h(\d{2})/);
+      if(m) return { idx, offset:i, time: m[1].padStart(2,"0") + "h" + m[2] };
+    }
+  }
+  return null;
+}
+
+function updateStatusPill(todayIdx){
+  const pill = document.getElementById("statusPill");
+  const label = document.getElementById("statusText");
+  const today = CONTENT.hours[todayIdx];
+  const S = STATUS[currentLang];
+  let isOpen = false, openMin = null, closeMin = null, nowMin = null;
+  if(!today.closed){
+    const m = today.text.match(/(\d{1,2})h(\d{2})\s*[–\-]\s*(\d{1,2})h(\d{2})/);
+    if(m){
+      const now = new Date();
+      nowMin = now.getHours()*60 + now.getMinutes();
+      openMin = parseInt(m[1])*60 + parseInt(m[2]);
+      closeMin = parseInt(m[3])*60 + parseInt(m[4]);
+      isOpen = nowMin >= openMin && nowMin <= closeMin;
+    }
+  }
+  pill.classList.remove("open","closed");
+
+  if(isOpen){
+    label.textContent = S.open + " · " + today.text;
+    pill.classList.add("open");
+    return;
+  }
+
+  pill.classList.add("closed");
+
+  // Closed right now — but not open yet today (before opening time)
+  if(!today.closed && openMin !== null && nowMin < openMin){
+    const openTime = today.text.match(/(\d{1,2})h(\d{2})/)[0];
+    label.textContent = `${S.closedNow} · ${S.opens} ${S.today} ${S.at} ${openTime}`;
+    return;
+  }
+
+  // Closed today (flagged closed, or already past closing time) — find the next open day
+  const next = findNextOpening(todayIdx);
+  if(next){
+    const when = next.offset === 1 ? S.tomorrow : t(next && CONTENT.hours[next.idx].day);
+    const prefix = today.closed ? S.closedToday : S.closedNow;
+    label.textContent = `${prefix} · ${S.opens} ${when} ${S.at} ${next.time}`;
+  } else {
+    label.textContent = today.closed ? S.closedToday : S.closedNow;
+  }
+}
+
+/* ---------- STRUCTURED DATA (kept in sync with live, editable content) ---------- */
+function updateStructuredData(){
+  try{
+    const base = JSON.parse(document.getElementById("ldJson").textContent);
+
+    // hasMenu — reflects whatever categories/dishes are currently in the CMS
+    base.hasMenu = {
+      "@type": "Menu",
+      "hasMenuSection": CONTENT.menu.categories.map(cat => ({
+        "@type": "MenuSection",
+        "name": t(cat.name),
+        "hasMenuItem": cat.items.map(it => ({
+          "@type": "MenuItem",
+          "name": t(it.name),
+          "description": t(it.desc),
+          "offers": { "@type": "Offer", "price": it.price, "priceCurrency": "CHF" }
+        }))
+      }))
+    };
+
+    // aggregateRating — computed live from the testimonials in the CMS
+    if(CONTENT.reviews.items.length){
+      const avg = CONTENT.reviews.items.reduce((s,r)=>s+r.rating,0) / CONTENT.reviews.items.length;
+      base.aggregateRating = {
+        "@type": "AggregateRating",
+        "ratingValue": avg.toFixed(1),
+        "reviewCount": CONTENT.reviews.items.length
+      };
+    }
+
+    base.name = t(CONTENT.site.name);
+    base.telephone = CONTENT.contact.phone;
+    base.email = CONTENT.contact.email;
+    base.address.streetAddress = CONTENT.location.addr1;
+
+    document.getElementById("ldJson").textContent = JSON.stringify(base);
+  }catch(e){ /* structured data is non-critical, fail silently */ }
+
+  // FAQPage — mirrors the visible FAQ accordion exactly (required for valid FAQ rich results)
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": CONTENT.faq.items.map(f => ({
+      "@type": "Question",
+      "name": t(f.q),
+      "acceptedAnswer": { "@type": "Answer", "text": t(f.a) }
+    }))
+  };
+  document.getElementById("ldJsonFaq").textContent = JSON.stringify(faqSchema);
+}
+
+/* ---------- RENDER ---------- */
+function t(field){ return field[currentLang] || field["fr"] || ""; }
+
+function render(){
+  const S = UI[currentLang];
+  document.documentElement.lang = currentLang;
+
+  document.getElementById("metaTitle").textContent = t(CONTENT.site.metaTitle);
+  document.getElementById("ogTitle").setAttribute("content", t(CONTENT.site.metaTitle));
+  document.getElementById("metaDesc").setAttribute("content", t(CONTENT.site.metaDesc));
+  document.getElementById("ogDesc").setAttribute("content", t(CONTENT.site.metaDesc));
+
+  document.getElementById("brandName").innerHTML = t(CONTENT.site.name).replace(/(\S+)$/, '<span>$1</span>');
+  document.getElementById("footBrand").innerHTML = t(CONTENT.site.name).replace(/(\S+)$/, '<span style="color:var(--brass)">$1</span>');
+
+  // nav (4 core items; Reserve is always its own dedicated button, not duplicated in the list)
+  const ids = ["#about","#menu","#gallery","#visit"];
+  document.getElementById("navLinks").innerHTML = S.nav.map((label,i)=>`<li><a href="${ids[i]}">${label}</a></li>`).join("");
+  document.getElementById("footNav").innerHTML = S.nav.map((label,i)=>`<li><a href="${ids[i]}">${label}</a></li>`).join("")
+    + `<li><a href="#reserve">${S.reserve}</a></li>`;
+  document.getElementById("ctaReserve").textContent = S.reserve;
+  document.getElementById("mobileLinks").innerHTML = S.nav.map((label,i)=>`<li><a href="${ids[i]}">${label}</a></li>`).join("");
+  document.getElementById("mobileLangSwitch").innerHTML = LANGS.map(l=>
+    `<button data-lang="${l}" class="${l===currentLang?'active':''}">${LANG_LABELS[l]}</button>`).join("");
+  document.getElementById("mobileCta").textContent = S.reserve;
+  document.getElementById("footNavTitle").textContent = S.footNav;
+  document.getElementById("footContactTitle").textContent = S.footContact;
+  document.getElementById("openAdmin").textContent = S.admin;
+
+  // compact language dropdown (header)
+  document.getElementById("langCurrentBtn").innerHTML = `${LANG_LABELS[currentLang]} <span>▾</span>`;
+  document.getElementById("langMenu").innerHTML = LANGS.map(l=>
+    `<button data-lang="${l}" class="${l===currentLang?'active':''}">${LANG_LABELS[l]}</button>`).join("");
+
+  // mobile action bar (call / itinerary / reserve)
+  document.getElementById("mobileCall").innerHTML = `📞 ${S.call}`;
+  document.getElementById("mobileItinerary").innerHTML = `🧭 ${S.itinerary}`;
+  document.getElementById("mobileBook").textContent = S.reserve;
+
+  // hero
+  document.getElementById("heroEyebrow").textContent = t(CONTENT.hero.eyebrow);
+  document.getElementById("heroTitle").textContent = t(CONTENT.hero.title);
+  document.getElementById("heroLead").textContent = t(CONTENT.hero.lead);
+  document.getElementById("heroCta1").textContent = t(CONTENT.hero.cta1);
+  document.getElementById("heroCta2").textContent = t(CONTENT.hero.cta2);
+  document.getElementById("scrollLabel").textContent = S.scroll;
+
+  // about
+  document.getElementById("aboutTitle").textContent = t(CONTENT.about.title);
+  document.getElementById("aboutText").textContent = t(CONTENT.about.text);
+  document.getElementById("aboutQuote").textContent = t(CONTENT.about.quote);
+  document.getElementById("lblFounded").textContent = S.lblFounded;
+  document.getElementById("lblSeats").textContent = S.lblSeats;
+  document.getElementById("lblChef").textContent = S.lblChef;
+  document.getElementById("lblStyle").textContent = S.lblStyle;
+  document.getElementById("valFounded").textContent = CONTENT.about.founded;
+  document.getElementById("valSeats").textContent = t(CONTENT.about.seats);
+  document.getElementById("valChef").textContent = CONTENT.about.chef;
+  document.getElementById("valStyle").textContent = t(CONTENT.site.metaTitle).split("—")[0].trim();
+
+  // menu
+  document.getElementById("menuTitle").textContent = S.nav[1];
+  document.getElementById("menuNote").textContent = S.menuNote;
+  const tabsEl = document.getElementById("menuTabs");
+  const listsEl = document.getElementById("menuLists");
+  tabsEl.innerHTML = "";
+  listsEl.innerHTML = "";
+  CONTENT.menu.categories.forEach((cat,ci)=>{
+    const tab = document.createElement("button");
+    tab.className = "tab" + (ci===0?" active":"");
+    tab.textContent = t(cat.name);
+    tab.onclick = ()=>{
+      tabsEl.querySelectorAll(".tab").forEach(b=>b.classList.remove("active"));
+      tab.classList.add("active");
+      listsEl.querySelectorAll(".menu-list").forEach(l=>l.classList.remove("active"));
+      document.getElementById("mlist"+ci).classList.add("active");
+    };
+    tabsEl.appendChild(tab);
+    const list = document.createElement("div");
+    list.className = "menu-list" + (ci===0?" active":"");
+    list.id = "mlist"+ci;
+    list.innerHTML = cat.items.map(it=>`
+      <div class="menu-item">
+        <div class="info">
+          <h3>${t(it.name)}<span class="dots"></span></h3>
+          <p>${t(it.desc)}</p>
+        </div>
+        <div class="price">CHF ${it.price}</div>
+      </div>`).join("");
+    listsEl.appendChild(list);
+  });
+
+  // gallery
+  document.getElementById("galleryTitle").textContent = S.nav[2];
+  document.getElementById("galleryGrid").innerHTML = CONTENT.gallery.map((g,i)=>`
+    <div class="gcard${i===0?' g1':''}"><span class="ico">📷</span><span class="cap">${t(g.caption)}</span></div>
+  `).join("");
+
+  // hours / visit
+  document.getElementById("visitTitle").textContent = S.nav[3];
+  const todayIdx = (new Date().getDay()+6)%7; // Mon=0
+  document.getElementById("hoursTable").innerHTML = CONTENT.hours.map((h,i)=>`
+    <tr class="${i===todayIdx?'today':''}"><td>${t(h.day)}</td><td>${h.closed ? S.closed : h.text}</td></tr>
+  `).join("");
+  document.getElementById("addrLine1").textContent = CONTENT.location.addr1;
+  document.getElementById("addrLine2").textContent = CONTENT.location.addr2;
+  document.getElementById("addrPhone").textContent = CONTENT.contact.phone;
+  document.getElementById("addrEmail").textContent = CONTENT.contact.email;
+  document.getElementById("footPhone").textContent = CONTENT.contact.phone;
+  document.getElementById("footEmail").textContent = CONTENT.contact.email;
+  document.getElementById("footInsta").href = CONTENT.contact.instagram;
+
+  // click-to-call links follow the configured phone number
+  const telHref = "tel:" + CONTENT.contact.phone.replace(/[^+\d]/g, "");
+  document.getElementById("mobileCall").href = telHref;
+  const subbarPhoneEl = document.getElementById("subbarPhone");
+  subbarPhoneEl.href = telHref;
+  subbarPhoneEl.textContent = "📞 " + CONTENT.contact.phone;
+  document.getElementById("subbarAddr").textContent = "📍 " + CONTENT.location.addr1 + ", " + CONTENT.location.addr2.split(",")[0];
+
+  // open / closed status
+  updateStatusPill(todayIdx);
+
+  // reviews / social proof
+  document.getElementById("reviewsTitle").textContent = t(CONTENT.reviews.title);
+  document.getElementById("reviewsGrid").innerHTML = CONTENT.reviews.items.map(r=>`
+    <div class="review-card">
+      <div class="review-stars" aria-label="${r.rating}/5">${"★".repeat(r.rating)}${"☆".repeat(5-r.rating)}</div>
+      <p class="review-text">"${t(r.text)}"</p>
+      <div class="review-author">${r.author}</div>
+    </div>`).join("");
+
+  // FAQ (visible accordion, kept in sync with an FAQPage schema below)
+  document.getElementById("faqTitle").textContent = t(CONTENT.faq.title);
+  document.getElementById("faqList").innerHTML = CONTENT.faq.items.map((f,i)=>`
+    <div class="faq-item" data-faq="${i}">
+      <button class="faq-q" aria-expanded="false">${t(f.q)}<span class="plus">+</span></button>
+      <div class="faq-a"><p>${t(f.a)}</p></div>
+    </div>`).join("");
+  document.querySelectorAll(".faq-q").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      const item = btn.closest(".faq-item");
+      const willOpen = !item.classList.contains("open");
+      item.classList.toggle("open", willOpen);
+      btn.setAttribute("aria-expanded", String(willOpen));
+    });
+  });
+
+  updateStructuredData();
+
+  // reservation
+  document.getElementById("reserveTitle").textContent = S.reserveTitle;
+  document.getElementById("lblName").textContent = S.form.name;
+  document.getElementById("lblPhone").textContent = S.form.phone;
+  document.getElementById("lblDate").textContent = S.form.date;
+  document.getElementById("lblTime").textContent = S.form.time;
+  document.getElementById("lblGuests").textContent = S.form.guests;
+  document.getElementById("lblMsg").textContent = S.form.msg;
+  document.getElementById("rSubmit").textContent = S.form.submit;
+  document.getElementById("resNote").textContent = S.resNote;
+  document.getElementById("footTagline").textContent = t(CONTENT.site.tagline);
+
+  document.getElementById("copyright").textContent = `© ${new Date().getFullYear()} ${t(CONTENT.site.name)} — ${CONTENT.location.addr2}`;
+}
+
+/* ---------- LANGUAGE SWITCH ---------- */
+// This page lives at a language-specific URL (/fr/, /de/, /it/, /en/) for SEO.
+// Picking another language navigates to that sibling URL instead of re-rendering in place,
+// so each language always has its own indexable, shareable link.
+const LANG_URLS = { fr:"../fr/", de:"../de/", it:"../it/", en:"../en/" };
+document.addEventListener("click", (e)=>{
+  const btn = e.target.closest("[data-lang]");
+  if(btn){
+    const target = btn.dataset.lang;
+    if(target === currentLang){ closeLangDropdown(); return; }
+    window.location.href = LANG_URLS[target];
+  }
+});
+
+/* ---------- COMPACT LANGUAGE DROPDOWN (header) ---------- */
+const langDropdown = document.getElementById("langDropdown");
+function closeLangDropdown(){
+  langDropdown.classList.remove("open");
+  document.getElementById("langCurrentBtn").setAttribute("aria-expanded","false");
+}
+document.getElementById("langCurrentBtn").addEventListener("click", (e)=>{
+  e.stopPropagation();
+  const willOpen = !langDropdown.classList.contains("open");
+  langDropdown.classList.toggle("open", willOpen);
+  document.getElementById("langCurrentBtn").setAttribute("aria-expanded", String(willOpen));
+});
+document.addEventListener("click", (e)=>{
+  if(!langDropdown.contains(e.target)) closeLangDropdown();
+});
+document.addEventListener("keydown", (e)=>{
+  if(e.key === "Escape") closeLangDropdown();
+});
+
+/* ---------- MOBILE DRAWER ---------- */
+const drawer = document.getElementById("mobileDrawer");
+const backdrop = document.getElementById("drawerBackdrop");
+function openDrawer(){
+  drawer.classList.add("open"); backdrop.classList.add("open");
+  document.body.classList.add("drawer-locked");
+  document.getElementById("burgerBtn").setAttribute("aria-expanded","true");
+}
+function closeDrawer(){
+  drawer.classList.remove("open"); backdrop.classList.remove("open");
+  document.body.classList.remove("drawer-locked");
+  document.getElementById("burgerBtn").setAttribute("aria-expanded","false");
+}
+document.getElementById("burgerBtn").addEventListener("click", openDrawer);
+document.getElementById("closeMobileDrawer").addEventListener("click", closeDrawer);
+backdrop.addEventListener("click", closeDrawer);
+drawer.addEventListener("click", (e)=>{
+  if(e.target.tagName === "A") closeDrawer();
+});
+
+/* ---------- THEME TOGGLE (dark / light) ---------- */
+document.getElementById("themeToggle").addEventListener("click", ()=>{
+  document.documentElement.classList.toggle("theme-alt");
+});
+
+/* ---------- RESERVATION FORM -> mailto ---------- */
+document.getElementById("resForm").addEventListener("submit", (e)=>{
+  e.preventDefault();
+  const S = UI[currentLang].form;
+  const name = document.getElementById("rName").value;
+  const phone = document.getElementById("rPhone").value;
+  const date = document.getElementById("rDate").value;
+  const time = document.getElementById("rTime").value;
+  const guests = document.getElementById("rGuests").value;
+  const msg = document.getElementById("rMsg").value;
+  const body = `${S.name}: ${name}\n${S.phone}: ${phone}\n${S.date}: ${date}\n${S.time}: ${time}\n${S.guests}: ${guests}\n${S.msg}: ${msg}`;
+  const subject = encodeURIComponent(`${UI[currentLang].reserve} — ${t(CONTENT.site.name)}`);
+  window.location.href = `mailto:${CONTENT.contact.email}?subject=${subject}&body=${encodeURIComponent(body)}`;
+});
+
+/* ================== ADMIN / CMS ================== */
+const overlay = document.getElementById("adminOverlay");
+document.getElementById("openAdmin").addEventListener("click", ()=>{
+  overlay.classList.add("open");
+  document.getElementById("passGate").style.display = isAdmin ? "none" : "block";
+  document.getElementById("adminBody").style.display = isAdmin ? "block" : "none";
+  if(isAdmin) buildAdmin();
+});
+document.getElementById("passCancel").addEventListener("click", ()=> overlay.classList.remove("open"));
+document.getElementById("closeAdmin").addEventListener("click", ()=> overlay.classList.remove("open"));
+document.getElementById("passSubmit").addEventListener("click", ()=>{
+  if(document.getElementById("passInput").value === ADMIN_PASSWORD){
+    isAdmin = true;
+    document.getElementById("passGate").style.display = "none";
+    document.getElementById("adminBody").style.display = "block";
+    buildAdmin();
+  } else {
+    alert("Mot de passe incorrect.");
+  }
+});
+
+function langInputs(fieldObj, onchange, multiline){
+  return `<div class="lang-field-wrap">` + LANGS.map(l=>`
+    <div class="langrow">
+      <span>${l.toUpperCase()}</span>
+      ${multiline
+        ? `<textarea data-lang="${l}">${(fieldObj[l]||"")}</textarea>`
+        : `<input type="text" data-lang="${l}" value="${(fieldObj[l]||"").replace(/"/g,'&quot;')}">`
+      }
+    </div>`).join("") + `</div>`;
+}
+
+function bindLangInputs(container, fieldObj){
+  container.querySelectorAll("[data-lang]").forEach(inp=>{
+    inp.addEventListener("input", ()=>{ fieldObj[inp.dataset.lang] = inp.value; });
+  });
+}
+
+function buildAdmin(){
+  const root = document.getElementById("adminSections");
+  root.innerHTML = `
+    <div class="admin-section active" data-sec="general">
+      <div class="field-group"><strong>Nom du restaurant</strong>${langInputs(CONTENT.site.name)}</div>
+      <div class="field-group"><strong>Titre SEO (balise title)</strong>${langInputs(CONTENT.site.metaTitle)}</div>
+      <div class="field-group"><strong>Description SEO (meta description)</strong>${langInputs(CONTENT.site.metaDesc, null, true)}</div>
+      <div class="field-group"><strong>Accroche (pied de page)</strong>${langInputs(CONTENT.site.tagline)}</div>
+    </div>
+
+    <div class="admin-section" data-sec="hero">
+      <div class="field-group"><strong>Sur-titre (ville)</strong>${langInputs(CONTENT.hero.eyebrow)}</div>
+      <div class="field-group"><strong>Titre principal</strong>${langInputs(CONTENT.hero.title, null, true)}</div>
+      <div class="field-group"><strong>Sous-titre</strong>${langInputs(CONTENT.hero.lead, null, true)}</div>
+      <div class="field-group"><strong>Bouton 1</strong>${langInputs(CONTENT.hero.cta1)}</div>
+      <div class="field-group"><strong>Bouton 2</strong>${langInputs(CONTENT.hero.cta2)}</div>
+    </div>
+
+    <div class="admin-section" data-sec="about">
+      <div class="field-group"><strong>Titre</strong>${langInputs(CONTENT.about.title)}</div>
+      <div class="field-group"><strong>Texte</strong>${langInputs(CONTENT.about.text, null, true)}</div>
+      <div class="field-group"><strong>Citation</strong>${langInputs(CONTENT.about.quote, null, true)}</div>
+      <div class="field-group"><strong>Année d'ouverture</strong><input type="text" id="foundedInput" value="${CONTENT.about.founded}"></div>
+      <div class="field-group"><strong>Places assises</strong>${langInputs(CONTENT.about.seats)}</div>
+      <div class="field-group"><strong>Chef de cuisine</strong><input type="text" id="chefInput" value="${CONTENT.about.chef}"></div>
+    </div>
+
+    <div class="admin-section" data-sec="menu" id="menuAdminSec"></div>
+    <div class="admin-section" data-sec="gallery" id="galleryAdminSec"></div>
+    <div class="admin-section" data-sec="reviews" id="reviewsAdminSec"></div>
+    <div class="admin-section" data-sec="faq" id="faqAdminSec"></div>
+    <div class="admin-section" data-sec="hours" id="hoursAdminSec"></div>
+
+    <div class="admin-section" data-sec="contact">
+      <div class="field-group"><strong>Adresse ligne 1</strong><input type="text" id="addr1Input" value="${CONTENT.location.addr1}"></div>
+      <div class="field-group"><strong>Adresse ligne 2 (NPA / Ville)</strong><input type="text" id="addr2Input" value="${CONTENT.location.addr2}"></div>
+      <div class="field-group"><strong>Téléphone</strong><input type="text" id="phoneInput" value="${CONTENT.contact.phone}"></div>
+      <div class="field-group"><strong>E-mail</strong><input type="text" id="emailInput" value="${CONTENT.contact.email}"></div>
+      <div class="field-group"><strong>Instagram (lien)</strong><input type="text" id="instaInput" value="${CONTENT.contact.instagram}"></div>
+    </div>
+  `;
+
+  // bind simple text fields
+  root.querySelectorAll(".field-group").forEach(fg=>{
+    // no-op, individual bindings below
+  });
+  bindLangInputs(root.querySelector('[data-sec="general"]'), null); // placeholder, real bind below per field
+  // Actual per-field bindings (safer than generic):
+  const bindAll = (sec, pairs)=>{
+    const secEl = root.querySelector(`[data-sec="${sec}"]`);
+    pairs.forEach(([fieldObj, groupIdx])=>{
+      const groups = secEl.querySelectorAll(".field-group");
+      bindLangInputs(groups[groupIdx], fieldObj);
+    });
+  };
+  bindAll("general", [[CONTENT.site.name,0],[CONTENT.site.metaTitle,1],[CONTENT.site.metaDesc,2],[CONTENT.site.tagline,3]]);
+  bindAll("hero", [[CONTENT.hero.eyebrow,0],[CONTENT.hero.title,1],[CONTENT.hero.lead,2],[CONTENT.hero.cta1,3],[CONTENT.hero.cta2,4]]);
+  bindAll("about", [[CONTENT.about.title,0],[CONTENT.about.text,1],[CONTENT.about.quote,2]]);
+  root.querySelector("#foundedInput").addEventListener("input", e=> CONTENT.about.founded = e.target.value);
+  const aboutSec = root.querySelector('[data-sec="about"]');
+  bindLangInputs(aboutSec.querySelectorAll(".field-group")[4], CONTENT.about.seats);
+  root.querySelector("#chefInput").addEventListener("input", e=> CONTENT.about.chef = e.target.value);
+
+  root.querySelector("#addr1Input").addEventListener("input", e=> CONTENT.location.addr1 = e.target.value);
+  root.querySelector("#addr2Input").addEventListener("input", e=> CONTENT.location.addr2 = e.target.value);
+  root.querySelector("#phoneInput").addEventListener("input", e=> CONTENT.contact.phone = e.target.value);
+  root.querySelector("#emailInput").addEventListener("input", e=> CONTENT.contact.email = e.target.value);
+  root.querySelector("#instaInput").addEventListener("input", e=> CONTENT.contact.instagram = e.target.value);
+
+  buildMenuAdmin();
+  buildGalleryAdmin();
+  buildReviewsAdmin();
+  buildFaqAdmin();
+  buildHoursAdmin();
+
+  // tab switching
+  document.querySelectorAll(".admin-tabs button").forEach(b=>{
+    b.addEventListener("click", ()=>{
+      document.querySelectorAll(".admin-tabs button").forEach(x=>x.classList.remove("active"));
+      b.classList.add("active");
+      root.querySelectorAll(".admin-section").forEach(s=>s.classList.remove("active"));
+      root.querySelector(`[data-sec="${b.dataset.tab}"]`).classList.add("active");
+    });
+  });
+}
+
+function buildMenuAdmin(){
+  const sec = document.getElementById("menuAdminSec");
+  sec.innerHTML = "";
+  CONTENT.menu.categories.forEach((cat, ci)=>{
+    const catDiv = document.createElement("div");
+    catDiv.innerHTML = `<div class="cat-title-row"><h4>Catégorie</h4><button class="small-btn danger" data-delcat="${ci}">Supprimer la catégorie</button></div>`;
+    const catNameGroup = document.createElement("div");
+    catNameGroup.className = "field-group";
+    catNameGroup.innerHTML = `<strong>Nom de la catégorie</strong>${langInputs(cat.name)}`;
+    bindLangInputs(catNameGroup, cat.name);
+    catDiv.appendChild(catNameGroup);
+
+    cat.items.forEach((item, ii)=>{
+      const itemGroup = document.createElement("div");
+      itemGroup.className = "field-group";
+      itemGroup.innerHTML = `
+        <strong>Plat</strong>${langInputs(item.name)}
+        <strong style="display:block;margin-top:10px;">Description</strong>${langInputs(item.desc, null, true)}
+        <strong style="display:block;margin-top:10px;">Prix (CHF)</strong>
+        <input type="text" data-price value="${item.price}">
+        <div class="item-actions"><button class="small-btn danger" data-delitem="${ci}:${ii}">Supprimer ce plat</button></div>
+      `;
+      const wraps = itemGroup.querySelectorAll(".lang-field-wrap");
+      bindLangInputs(wraps[0], item.name);
+      bindLangInputs(wraps[1], item.desc);
+      itemGroup.querySelector("[data-price]").addEventListener("input", e=> item.price = e.target.value);
+      catDiv.appendChild(itemGroup);
+    });
+
+    const addItemBtn = document.createElement("button");
+    addItemBtn.className = "small-btn";
+    addItemBtn.textContent = "+ Ajouter un plat";
+    addItemBtn.style.marginBottom = "20px";
+    addItemBtn.addEventListener("click", ()=>{
+      cat.items.push({name:{fr:"Nouveau plat",de:"Neues Gericht",it:"Nuovo piatto",en:"New dish"}, desc:{fr:"",de:"",it:"",en:""}, price:"0"});
+      buildMenuAdmin();
+    });
+    catDiv.appendChild(addItemBtn);
+    sec.appendChild(catDiv);
+  });
+
+  const addCatBtn = document.createElement("button");
+  addCatBtn.className = "btn btn-ghost";
+  addCatBtn.textContent = "+ Ajouter une catégorie";
+  addCatBtn.addEventListener("click", ()=>{
+    CONTENT.menu.categories.push({name:{fr:"Nouvelle catégorie",de:"Neue Kategorie",it:"Nuova categoria",en:"New category"}, items:[]});
+    buildMenuAdmin();
+  });
+  sec.appendChild(addCatBtn);
+
+  sec.querySelectorAll("[data-delcat]").forEach(b=> b.addEventListener("click", ()=>{
+    CONTENT.menu.categories.splice(parseInt(b.dataset.delcat),1); buildMenuAdmin();
+  }));
+  sec.querySelectorAll("[data-delitem]").forEach(b=> b.addEventListener("click", ()=>{
+    const [ci,ii] = b.dataset.delitem.split(":").map(Number);
+    CONTENT.menu.categories[ci].items.splice(ii,1); buildMenuAdmin();
+  }));
+}
+
+function buildGalleryAdmin(){
+  const sec = document.getElementById("galleryAdminSec");
+  sec.innerHTML = "";
+  CONTENT.gallery.forEach((g, gi)=>{
+    const group = document.createElement("div");
+    group.className = "field-group";
+    group.innerHTML = `<strong>Légende photo ${gi+1}</strong>${langInputs(g.caption)}
+      <div class="item-actions"><button class="small-btn danger" data-delg="${gi}">Supprimer</button></div>`;
+    bindLangInputs(group, g.caption);
+    sec.appendChild(group);
+  });
+  const addBtn = document.createElement("button");
+  addBtn.className = "btn btn-ghost";
+  addBtn.textContent = "+ Ajouter une photo (légende)";
+  addBtn.addEventListener("click", ()=>{
+    CONTENT.gallery.push({caption:{fr:"Nouvelle photo",de:"Neues Foto",it:"Nuova foto",en:"New photo"}});
+    buildGalleryAdmin();
+  });
+  sec.appendChild(addBtn);
+  sec.querySelectorAll("[data-delg]").forEach(b=> b.addEventListener("click", ()=>{
+    CONTENT.gallery.splice(parseInt(b.dataset.delg),1); buildGalleryAdmin();
+  }));
+}
+
+function buildReviewsAdmin(){
+  const sec = document.getElementById("reviewsAdminSec");
+  sec.innerHTML = `<div class="field-group"><strong>Titre de la section</strong>${langInputs(CONTENT.reviews.title)}</div>`;
+  bindLangInputs(sec.querySelector(".field-group"), CONTENT.reviews.title);
+
+  CONTENT.reviews.items.forEach((r, ri)=>{
+    const group = document.createElement("div");
+    group.className = "field-group";
+    group.innerHTML = `
+      <div class="langrow"><span>Nom</span><input type="text" data-author value="${r.author.replace(/"/g,'&quot;')}"></div>
+      <div class="langrow"><span>Note</span>
+        <select data-rating>
+          ${[5,4,3,2,1].map(n=>`<option value="${n}" ${r.rating===n?"selected":""}>${"★".repeat(n)}${"☆".repeat(5-n)}</option>`).join("")}
+        </select>
+      </div>
+      <strong>Avis</strong>${langInputs(r.text, null, true)}
+      <div class="item-actions"><button class="small-btn danger" data-delr="${ri}">Supprimer cet avis</button></div>
+    `;
+    bindLangInputs(group, r.text);
+    group.querySelector("[data-author]").addEventListener("input", e=> r.author = e.target.value);
+    group.querySelector("[data-rating]").addEventListener("change", e=> r.rating = parseInt(e.target.value));
+    sec.appendChild(group);
+  });
+
+  const addBtn = document.createElement("button");
+  addBtn.className = "btn btn-ghost";
+  addBtn.textContent = "+ Ajouter un avis";
+  addBtn.addEventListener("click", ()=>{
+    CONTENT.reviews.items.push({author:"Nouveau client", rating:5, text:{fr:"",de:"",it:"",en:""}});
+    buildReviewsAdmin();
+  });
+  sec.appendChild(addBtn);
+  sec.querySelectorAll("[data-delr]").forEach(b=> b.addEventListener("click", ()=>{
+    CONTENT.reviews.items.splice(parseInt(b.dataset.delr),1); buildReviewsAdmin();
+  }));
+}
+
+function buildFaqAdmin(){
+  const sec = document.getElementById("faqAdminSec");
+  sec.innerHTML = `<div class="field-group"><strong>Titre de la section</strong>${langInputs(CONTENT.faq.title)}</div>`;
+  bindLangInputs(sec.querySelector(".field-group"), CONTENT.faq.title);
+
+  CONTENT.faq.items.forEach((f, fi)=>{
+    const group = document.createElement("div");
+    group.className = "field-group";
+    group.innerHTML = `
+      <strong>Question</strong>${langInputs(f.q)}
+      <strong style="display:block;margin-top:10px;">Réponse</strong>${langInputs(f.a, null, true)}
+      <div class="item-actions"><button class="small-btn danger" data-delf="${fi}">Supprimer cette question</button></div>
+    `;
+    const wraps = group.querySelectorAll(".lang-field-wrap");
+    bindLangInputs(wraps[0], f.q);
+    bindLangInputs(wraps[1], f.a);
+    sec.appendChild(group);
+  });
+
+  const addBtn = document.createElement("button");
+  addBtn.className = "btn btn-ghost";
+  addBtn.textContent = "+ Ajouter une question";
+  addBtn.addEventListener("click", ()=>{
+    CONTENT.faq.items.push({q:{fr:"Nouvelle question",de:"Neue Frage",it:"Nuova domanda",en:"New question"}, a:{fr:"",de:"",it:"",en:""}});
+    buildFaqAdmin();
+  });
+  sec.appendChild(addBtn);
+  sec.querySelectorAll("[data-delf]").forEach(b=> b.addEventListener("click", ()=>{
+    CONTENT.faq.items.splice(parseInt(b.dataset.delf),1); buildFaqAdmin();
+  }));
+}
+
+function buildHoursAdmin(){
+  const sec = document.getElementById("hoursAdminSec");
+  sec.innerHTML = "";
+  CONTENT.hours.forEach((h, hi)=>{
+    const group = document.createElement("div");
+    group.className = "field-group";
+    group.innerHTML = `
+      <strong>${h.day.fr}</strong>
+      <div class="langrow"><span>Heures</span><input type="text" data-htext value="${h.text}"></div>
+      <label style="display:flex; align-items:center; gap:8px; margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:0.78rem;">
+        <input type="checkbox" data-hclosed ${h.closed?"checked":""} style="width:auto;"> Fermé ce jour
+      </label>
+    `;
+    group.querySelector("[data-htext]").addEventListener("input", e=> h.text = e.target.value);
+    group.querySelector("[data-hclosed]").addEventListener("change", e=> h.closed = e.target.checked);
+    sec.appendChild(group);
+  });
+}
+
+/* ---------- EXPORT / IMPORT ---------- */
+document.getElementById("exportBtn").addEventListener("click", ()=>{
+  const blob = new Blob([JSON.stringify(CONTENT, null, 2)], {type:"application/json"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = "content.json";
+  a.click();
+  URL.revokeObjectURL(url);
+});
+document.getElementById("importInput").addEventListener("change", (e)=>{
+  const file = e.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = ()=>{
+    try{
+      CONTENT = JSON.parse(reader.result);
+      render();
+      buildAdmin();
+      alert("Contenu importé avec succès.");
+    }catch(err){ alert("Fichier JSON invalide."); }
+  };
+  reader.readAsText(file);
+});
+
+render();
+</script>
+</body>
+</html>
