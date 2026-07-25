@@ -1,114 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Restaurant Belvédère — Fribourg, Suisse</title>
+    <title>Restaurant Belvédère — Fribourg, Switzerland</title>
 
-<meta name="description" content="Restaurant Belvédère à Fribourg : cuisine suisse de saison.">
-<meta name="robots" content="index, follow">
+    <meta name="description" content="Restaurant Belvédère in Fribourg: seasonal Swiss cuisine.">
+    <meta name="robots" content="index, follow">
 
-<link rel="canonical" href="https://www.restaurant-belvedere.ch/en/">
+    <link rel="canonical" href="https://www.restaurant-belvedere.ch/en/">
 
-<link rel="alternate" hreflang="fr" href="https://www.restaurant-belvedere.ch/fr/">
-<link rel="alternate" hreflang="de" href="https://www.restaurant-belvedere.ch/de/">
-<link rel="alternate" hreflang="it" href="https://www.restaurant-belvedere.ch/it/">
-<link rel="alternate" hreflang="en" href="https://www.restaurant-belvedere.ch/en/">
-<link rel="alternate" hreflang="x-default" href="https://www.restaurant-belvedere.ch/en/">
+    <link rel="alternate" hreflang="en" href="https://www.restaurant-belvedere.ch/en/">
+    <link rel="alternate" hreflang="fr" href="https://www.restaurant-belvedere.ch/fr/">
+    <link rel="alternate" hreflang="de" href="https://www.restaurant-belvedere.ch/de/">
+    <link rel="alternate" hreflang="it" href="https://www.restaurant-belvedere.ch/it/">
+    <link rel="alternate" hreflang="x-default" href="https://www.restaurant-belvedere.ch/en/">
 
-<style>
-body{
-    margin:0;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#17231c;
-    color:#ede6d6;
-    font-family:Arial, Helvetica, sans-serif;
-    text-align:center;
-}
-
-a{
-    color:#c6a15b;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.links{
-    display:flex;
-    gap:20px;
-    justify-content:center;
-    margin-top:20px;
-    flex-wrap:wrap;
-}
-</style>
-
-<script>
-(function () {
-
-    // Langues disponibles
-    const supported = ["fr","de","it","en"];
-
-    // 1. Vérifie si l'utilisateur a déjà choisi une langue
-    const savedLang = localStorage.getItem("language");
-
-    if(savedLang && supported.includes(savedLang)){
-        window.location.replace("/" + savedLang + "/");
-        return;
-    }
-
-    // 2. Sinon regarde les préférences du navigateur
-    const browserLanguages = navigator.languages || [navigator.language || "en"];
-
-    let target = "en";
-
-    for(const lang of browserLanguages){
-
-        const code = lang.substring(0,2).toLowerCase();
-
-        if(supported.includes(code)){
-            target = code;
-            break;
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #17231c;
+            color: #ede6d6;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
         }
-    }
 
-    window.location.replace("/" + target + "/");
+        a {
+            color: #c6a15b;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-})();
-</script>
+        .links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+    </style>
+
+    <script>
+        (function () {
+
+            const supported = ["en", "fr", "de", "it"];
+
+            // Langue enregistrée
+            const savedLang = localStorage.getItem("language");
+
+            // Si l'utilisateur a déjà choisi une langue
+            if (savedLang && supported.includes(savedLang)) {
+                window.location.replace("/" + savedLang + "/");
+                return;
+            }
+
+            // Première visite -> toujours anglais
+            localStorage.setItem("language", "en");
+            window.location.replace("/en/");
+
+        })();
+    </script>
 
 </head>
 
 <body>
 
-<div>
+    <div>
 
-<h2>Redirection...</h2>
+        <h2>Redirecting...</h2>
 
-<p>
-Français / Deutsch / Italiano / English
-</p>
+        <p>Please wait...</p>
 
-<noscript>
+        <noscript>
 
-<p>JavaScript est désactivé.</p>
+            <p>Select your language:</p>
 
-<div class="links">
-<a href="/en/">English</a>
+            <div class="links">
+                <a href="/en/">🇬🇧 English</a>
+                <a href="/fr/">🇫🇷 Français</a>
+                <a href="/de/">🇩🇪 Deutsch</a>
+                <a href="/it/">🇮🇹 Italiano</a>
+            </div>
 
-<a href="/fr/">Français</a>
+        </noscript>
 
-<a href="/de/">Deutsch</a>
-
-<a href="/it/">Italiano</a>
-
-</div>
-
-</noscript>
-
-</div>
+    </div>
 
 </body>
+
 </html>
