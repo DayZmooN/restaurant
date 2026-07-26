@@ -1,0 +1,11 @@
+Options -Indexes
+
+RewriteEngine On
+
+# Redirect root to English homepage
+RewriteRule ^/?$ /en/ [R=302,L]
+
+# Ensure language folders work with or without trailing slash
+RewriteRule ^(en|fr|de|it)$ /$1/ [R=302,L]
+
+DirectoryIndex index.html

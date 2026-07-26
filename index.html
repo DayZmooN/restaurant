@@ -56,13 +56,13 @@
 
             // Si l'utilisateur a déjà choisi une langue
             if (savedLang && supported.includes(savedLang)) {
-                window.location.replace("/" + savedLang + "/");
+                window.location.replace("./" + savedLang + "/");
                 return;
             }
 
             // Première visite -> toujours anglais
             localStorage.setItem("language", "en");
-            window.location.replace("/en/");
+            window.location.replace("./en/");
 
         })();
     </script>
@@ -82,10 +82,10 @@
             <p>Select your language:</p>
 
             <div class="links">
-                <a href="/en/index.html">🇬🇧 English</a>
-                <a href="/fr/index.html">🇫🇷 Français</a>
-                <a href="/de/index.html">🇩🇪 Deutsch</a>
-                <a href="/it/index.html">🇮🇹 Italiano</a>
+                <a href="./en/index.html">🇬🇧 English</a>
+                <a href="./fr/index.html">🇫🇷 Français</a>
+                <a href="./de/index.html">🇩🇪 Deutsch</a>
+                <a href="./it/index.html">🇮🇹 Italiano</a>
             </div>
 
         </noscript>
